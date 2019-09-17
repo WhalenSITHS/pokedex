@@ -34,7 +34,9 @@ function init() {
             displayImageBack.src = data.sprites.back_default;
             displayImageShinyBack.src = data.sprites.back_shiny;
             displayImageShinyFront.src = data.sprites.front_shiny;
-            type.textContent = `Type: ${data.types[0].type.name}`;
+            //type.textContent = `Type: ${data.types[0].type.name}`;
+            type.textContent = data.types.map(data => data.type.name);
+            
         })
         document.querySelector('#pokemon-name').value = '';
     });
