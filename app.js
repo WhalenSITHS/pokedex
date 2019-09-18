@@ -36,6 +36,7 @@ function init() {
             displayImageShinyFront.src = data.sprites.front_shiny;
             //type.textContent = `Type: ${data.types[0].type.name}`;
             type.textContent = data.types.map(data => data.type.name);
+            console.log(data);
             
         })
         document.querySelector('#pokemon-name').value = '';
