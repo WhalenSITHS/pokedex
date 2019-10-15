@@ -5,7 +5,6 @@ const displayImageShinyFront = document.querySelector('.display-image-shiny-fron
 const displayImageShinyBack = document.querySelector('.display-image-shiny-back');
 const displayNum = document.querySelector('.pkmn-num');
 const type = document.querySelector('.type');
-// let pkmnName = document.getElementById('pokemon-name').value;
 const input = document.getElementById('pkmn-form');
 
 input.addEventListener('keypress', function(event) {
@@ -14,10 +13,6 @@ input.addEventListener('keypress', function(event) {
         document.querySelector(".nes-btn").click();
       }
     });
-/* document.getElementById('pkmn-form').addEventListener('submit', function(e){
-    let pkmnName = document.getElementById('pokemon-name').value;
-    return pkmnName;
-}); */
 
 function init() {
     document.getElementById('pkmn-form').addEventListener('submit', function(e){
