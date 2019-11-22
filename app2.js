@@ -45,8 +45,10 @@ DOMStrings.input.addEventListener("keypress", function(event) {
     });
 } initMobile();*/
 
-
-
+function test(){
+  displayName.innerText = 'TEST'
+}
+test();
 function init() {
   document.getElementById("pkmn-form").addEventListener("submit", async function(e) {
       e.preventDefault();
