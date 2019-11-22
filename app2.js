@@ -48,10 +48,12 @@ DOMStrings.input.addEventListener("keypress", function(event) {
 function test(){
   DOMStrings.displayName.innerText = 'TEST'
 }
-test();
+//test();
 function init() {
   document.getElementById("pkmn-form").addEventListener("submit", async function(e) {
       e.preventDefault();
+      DOMStrings.displayName.innerText = 'test';
+
       const pkmnName = document.querySelector("#pokemon-name").value;
       try{
         const result = await fetch(
@@ -59,7 +61,7 @@ function init() {
         );
         const data = await result.json();
         const displayPkm = function(data) {
-          DOMStrings.displayName.innerText = data.name;
+          //DOMStrings.displayName.innerText = data.name;
           DOMStrings.displayNum.innerText = data.id;
           DOMStrings.displayImageFront.src = data.sprites.front_default;
           DOMStrings.displayImageBack.src = data.sprites.back_default;
