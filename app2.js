@@ -46,7 +46,7 @@ DOMStrings.input.addEventListener("keypress", function(event) {
 } initMobile();*/
 
 function test(){
-  displayName.innerText = 'TEST'
+  DOMStrings.displayName.innerText = 'TEST'
 }
 test();
 function init() {
