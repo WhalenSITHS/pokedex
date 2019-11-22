@@ -73,6 +73,8 @@ function init() {
         document.querySelector("#pokemon-name").value = "";
       }catch(err){
         console.log(err);
+        DOMStrings.type.textContent = 'Rest failed'
+
       }
 
     });
