@@ -7,6 +7,23 @@ const DOMStrings = {
   displayNum: document.querySelector(".pkmn-num"),
   type: document.querySelector(".type"),
   input: document.getElementById("pkmn-form"),
+  wrapper: document.querySelector(".wrapper")
+};
+const colors = {
+  fire: "#FDDFDF",
+  grass: "#DEFDE0",
+  electric: "#FCF7DE",
+  water: "#DEF3FD",
+  ground: "#f4e7da",
+  rock: "#d5d5d4",
+  fairy: "#fceaff",
+  poison: "#98d7a5",
+  bug: "#f8d5a3",
+  dragon: "#97b3e6",
+  psychic: "#eaeda1",
+  flying: "#F5F5F5",
+  fighting: "#E6E0D4",
+  normal: "#F5F5F5"
 };
 
 DOMStrings.input.addEventListener("keypress", function(event) {
@@ -16,14 +33,17 @@ DOMStrings.input.addEventListener("keypress", function(event) {
   }
 });
 
-
 function init() {
-  document.getElementById("pkmn-form").addEventListener("submit", async function(e) {
+  document
+    .getElementById("pkmn-form")
+    .addEventListener("submit", async function(e) {
       e.preventDefault();
-      DOMStrings.displayName.innerText = 'test';
+      DOMStrings.displayName.innerText = "test";
 
-      const pkmnName = document.querySelector("#pokemon-name").value.toLowerCase();
-      try{
+      const pkmnName = document
+        .querySelector("#pokemon-name")
+        .value.toLowerCase();
+      try {
         const result = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pkmnName}`
         );
@@ -36,15 +56,19 @@ function init() {
           DOMStrings.displayImageShinyBack.src = data.sprites.back_shiny;
           DOMStrings.displayImageShinyFront.src = data.sprites.front_shiny;
           DOMStrings.type.textContent = data.types.map(data => data.type.name);
+          console.log(data.types[0].type.name);
+
+          const color = colors[data.types[0].type.name];
+          console.log(color);
+          //console.log(data.types.type.name);
+          DOMStrings.wrapper.style.backgroundColor = color;
         };
         displayPkm(data);
         document.querySelector("#pokemon-name").value = "";
-      }catch(err){
+      } catch (err) {
         console.log(err);
-        DOMStrings.type.textContent = 'Pokemon not found please try again'
-
+        DOMStrings.type.textContent = "Pokemon not found please try again";
       }
-
     });
 }
 init();

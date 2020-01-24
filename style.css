@@ -1,93 +1,145 @@
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-*, *::after, ::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Press Start 2P', cursive;
-    cursor: default;
-}
-.wrapper{
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem auto;
-    align-items: center;
-    justify-content: center;
-}
-.banner{
-    font-size: 5rem;
-    margin: 1rem auto;
-    padding: 1rem;
-}
-.user-input{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-.user-search{
-    display: flex;
 
-    flex-direction: column;
-    
-    justify-content: space-around;
-    
-    align-items: center;
-    
-    height: 30vh;
+:root {
+  psychic: brown;
 }
-.user-search-banner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#pokemon-name{
-    width: 100%;
-    height: 4rem;
-}
-@media screen and (max-width: 900px){
-    #pokemon-name{
-        height: 10vh;
-    }
-    .banner{
-        font-size: 4rem;
-    }
-}
-.display-name{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5rem; 
-    justify-content: center;
-    align-items: center;
-    font-size: 3.5rem;
-    
 
+*,
+*::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  cursor: default;
 }
-.pkmn-name-size{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-}
-.pkmn-num{
-    font-size: 2rem;
-}
-.display-image-banner{
 
+.wrapper {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+.banner {
+  font-size: 5rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.user-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.user-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30vh;
+}
+
+.user-search-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pokemon-name {
+  width: 100%;
+  height: 4rem;
+}
+
+@media screen and (max-width: 900px) {
+  #pokemon-name {
+    height: 10vh;
+  }
+  .banner {
+    font-size: 4rem;
+  }
+}
+
+.display-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.5rem;
+}
+
+.pkmn-name-size {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.pkmn-num {
+  font-size: 2rem;
+}
+
 /* .display-image{
     height: 20rem;
 } */
-
-img[class^="display-image"]{
-    height: 20rem;
-}
-.type{
-    text-transform: uppercase;
-    font-size: 2rem;
+img[class^="display-image"] {
+  height: 20rem;
 }
 
-
-
+.type {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
