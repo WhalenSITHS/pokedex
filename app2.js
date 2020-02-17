@@ -12,8 +12,10 @@ const DOMStrings = {
   statsGallery: document.querySelector(".stats-gallery"),
   stats1: document.querySelector(".stats-1"),
   stats2: document.querySelector(".stats-2"),
-  abilities: document.querySelector(".abilities")
+  abilities: document.querySelector(".abilities"),
+  statsNodeList: document.querySelectorAll(".stats-arr")
 };
+const statsArr = Array.from(DOMStrings.statsNodeList);
 const colors = {
   fire: "#FDDFDF",
   grass: "#DEFDE0",
@@ -64,16 +66,19 @@ function init() {
           DOMStrings.abilities.textContent = data.abilities.map(
             data => data.ability.name
           );
-          //DOMStrings.stats1.textContent;
-          //DOMStrings.stats1.textContent = data.stats.map(el => el.stat.name);
-          //DOMStrings.stats2.textContent = data.stats.map(el => el.base_stat);
-          //data.stats.forEach(el => console.log(el.stat.name));
-          //data.stats.forEach(el => console.log(el.base_stat));
-          //data.stats.forEach(el => console.log(el));
+          //refactored
+          for (i = 0; i < statsArr.length; i++) {
+            statsArr[i].textContent = data.stats[i].base_stat;
+          }
+          console.log(data);
+          /*  statsArr[0].textContent = data.stats[0].base_stat;
+          statsArr[1].textContent = data.stats[1].base_stat;
+          statsArr[2].textContent = data.stats[2].base_stat;
+          statsArr[3].textContent = data.stats[3].base_stat;
+          statsArr[4].textContent = data.stats[4].base_stat;
+          statsArr[5].textContent = data.stats[5].base_stat; */
 
           const color = colors[data.types[0].type.name];
-          console.log(color);
-          //console.log(data.types.type.name);
           DOMStrings.wrapper.style.backgroundColor = color;
         };
         displayPkm(data);
