@@ -30,6 +30,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 20%;
 }
 .banner {
   font-size: 5rem;
@@ -116,7 +117,7 @@ img[class^="display-image"] {
 }
 .abilities {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -127,10 +128,11 @@ img[class^="display-image"] {
 .stats-gallery {
   display: flex;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   justify-content: space-between;
   align-items: center;
   width: 30vw;
+  background-color: white;
   padding: 1rem;
 }
 .stats {
