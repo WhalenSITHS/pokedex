@@ -139,7 +139,7 @@ img[class^="display-image"] {
   background-color: white;
   padding: 1rem;
   @include tablet {
-    background-color: none;
+    width: 60vw;
   }
 }
 .stats {
