@@ -17,19 +17,20 @@ const DOMStrings = {
 };
 const statsArr = Array.from(DOMStrings.statsNodeList);
 const colors = {
-  fire: "#FDDFDF",
-  grass: "#DEFDE0",
-  electric: "#FCF7DE",
-  water: "#DEF3FD",
-  ground: "#f4e7da",
-  rock: "#d5d5d4",
-  fairy: "#fceaff",
-  poison: "#98d7a5",
-  bug: "#f8d5a3",
+  fire: "#FD7D24",
+  grass: "#9BCC50",
+  electric: "#EED535",
+  water: "#4592C4",
+  ground: "#A38C21",
+  rock: "#A38C21",
+  fairy: "#FDB9E9",
+  poison: "#B97FC9",
+  ghost: "#B97FC9",
+  bug: "#729F3F",
   dragon: "#97b3e6",
-  psychic: "#eaeda1",
-  flying: "#F5F5F5",
-  fighting: "#E6E0D4",
+  psychic: "#F366B9",
+  flying: "#BDB9B8",
+  fighting: "#D56723",
   normal: "#F5F5F5"
 };
 
