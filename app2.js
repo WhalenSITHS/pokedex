@@ -8,7 +8,11 @@ const DOMStrings = {
   type: document.querySelector(".type"),
   input: document.getElementById("pkmn-form"),
   wrapper: document.querySelector(".wrapper"),
-  hideImage: document.querySelectorAll(".img-hide")
+  stats: document.querySelectorAll(".stats"),
+  statsGallery: document.querySelector(".stats-gallery"),
+  stats1: document.querySelector(".stats-1"),
+  stats2: document.querySelector(".stats-2"),
+  abilities: document.querySelector(".abilities")
 };
 const colors = {
   fire: "#FDDFDF",
@@ -57,8 +61,15 @@ function init() {
           DOMStrings.displayImageShinyBack.src = data.sprites.back_shiny;
           DOMStrings.displayImageShinyFront.src = data.sprites.front_shiny;
           DOMStrings.type.textContent = data.types.map(data => data.type.name);
-
-          console.log(data.types[0].type.name);
+          DOMStrings.abilities.textContent = data.abilities.map(
+            data => data.ability.name
+          );
+          //DOMStrings.stats1.textContent;
+          //DOMStrings.stats1.textContent = data.stats.map(el => el.stat.name);
+          //DOMStrings.stats2.textContent = data.stats.map(el => el.base_stat);
+          //data.stats.forEach(el => console.log(el.stat.name));
+          //data.stats.forEach(el => console.log(el.base_stat));
+          //data.stats.forEach(el => console.log(el));
 
           const color = colors[data.types[0].type.name];
           console.log(color);
