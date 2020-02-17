@@ -232,7 +232,7 @@ img[class^="display-image"] {
 
 @media (max-width: 800px) {
   .stats-gallery {
-    width: 60vw;
+    width: 90vw;
   }
 }
 
