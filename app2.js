@@ -27,11 +27,14 @@ const colors = {
   poison: "#B97FC9",
   ghost: "#B97FC9",
   bug: "#729F3F",
-  dragon: "#97b3e6",
+  dragon: "#7766EE",
   psychic: "#F366B9",
   flying: "#BDB9B8",
   fighting: "#D56723",
-  normal: "#F5F5F5"
+  normal: "#F5F5F5",
+  ice: "#51C4E7",
+  steel: "#AAAABB",
+  dark: "#775544"
 };
 
 DOMStrings.input.addEventListener("keypress", function(event) {
