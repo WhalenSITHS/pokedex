@@ -1,20 +1,26 @@
-$laptop: 900px;
-$desktop: 1100px;
-$tablet: 600px;
+$laptop: 1100px;
+$desktop: 4000px;
+$tablet: 800px;
+$phone: 600px;
 
 @mixin laptop {
-  @media (min-width: #{$laptop}) {
+  @media (max-width: #{$laptop}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (max-width: #{$desktop}) {
     @content;
   }
 }
 @mixin tablet {
-  @media (min-width: #{$tablet}) {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: #{$phone}) {
     @content;
   }
 }
@@ -24,8 +30,7 @@ $colors: (
   primary-light: #66fcf1,
   grey: #c5c6c7,
   primary-dark: #1f2833,
-  black: #0b0c10,
-  psychic: purple;
+  black: #0b0c10
 );
 
 @function color($color-name) {

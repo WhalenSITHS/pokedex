@@ -7,7 +7,8 @@ const DOMStrings = {
   displayNum: document.querySelector(".pkmn-num"),
   type: document.querySelector(".type"),
   input: document.getElementById("pkmn-form"),
-  wrapper: document.querySelector(".wrapper")
+  wrapper: document.querySelector(".wrapper"),
+  hideImage: document.querySelectorAll(".img-hide")
 };
 const colors = {
   fire: "#FDDFDF",
@@ -56,6 +57,7 @@ function init() {
           DOMStrings.displayImageShinyBack.src = data.sprites.back_shiny;
           DOMStrings.displayImageShinyFront.src = data.sprites.front_shiny;
           DOMStrings.type.textContent = data.types.map(data => data.type.name);
+
           console.log(data.types[0].type.name);
 
           const color = colors[data.types[0].type.name];

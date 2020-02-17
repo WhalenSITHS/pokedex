@@ -1,10 +1,17 @@
-//@import "_variables.scss";
+@import "_variables.scss";
 html {
   font-size: 62.5%;
+  @include laptop {
+    font-size: 60%;
+  }
+  @include tablet {
+    font-size: 55%;
+  }
+  @include phone {
+    font-size: 52%;
+  }
 }
-:root {
-  psychic: brown;
-}
+
 *,
 *::after,
 ::before {
@@ -22,6 +29,7 @@ html {
   margin: 1rem auto;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .banner {
   font-size: 5rem;
@@ -51,10 +59,14 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include tablet {
+    font-size: 2rem;
+  }
 }
 #pokemon-name {
   width: 100%;
   height: 4rem;
+  text-align: center;
 }
 @media screen and (max-width: 900px) {
   #pokemon-name {
