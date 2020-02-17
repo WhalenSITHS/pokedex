@@ -51,6 +51,13 @@ html {
   border-radius: 20%;
 }
 
+@media (max-width: 800px) {
+  .wrapper {
+    border-radius: 0;
+    width: 90vw;
+  }
+}
+
 .banner {
   font-size: 5rem;
   margin: 1rem auto;
@@ -221,6 +228,12 @@ img[class^="display-image"] {
   width: 30vw;
   background-color: white;
   padding: 1rem;
+}
+
+@media (max-width: 800px) {
+  .stats-gallery {
+    background-color: none;
+  }
 }
 
 .stats {
